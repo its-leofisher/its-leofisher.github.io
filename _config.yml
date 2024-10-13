@@ -14,35 +14,55 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 lang: en-US
-title: My Awesome Site
-email:
-description:
+title: Leo Fisher
+email: lcfisher15@outlook.com
+description: Web Software Engineer
 baseurl: # the optional subpath of your site, e.g. "/blog"
-url: # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url: https://its-leofisher.github.io  # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 author:
-  name:
+  name: Leo Fisher "LeoEff"
   twitter:
   picture:
 twitter_username:
-github_username:
+github_username: its-leofisher
+linkedin_username: leofisher
 logo: # path of site logo, e.g. "/assets/images/logo.png"
+
+# SEARCH
 search: # true, false (default)
 search_full_content: false # true, false (default)
-search_provider: # lunr (default), algolia
+search_provider: lunr # lunr (default), algolia
 algolia:
   application_id: # YOUR_APPLICATION_ID
   index_name: # YOUR_INDEX_NAME
   search_only_api_key: # YOUR_SEARCH_ONLY_API_KEY
   powered_by: # true (default), false
 
+#Custom settings
+permalink: /:year/:month/:title/
+#google_analytics: 
+#disqus:
+  #shortname: 
+
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-basically-basic
-plugins: # previsously gems
+highlighter: rouge
+
+# kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  auto_ids: true
+
+#theme: jekyll-theme-basically-basic
+plugins:
+  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-avatar
+  - jekyll-gist
 feed:
   path: atom.xml
 
@@ -83,3 +103,5 @@ defaults:
     values:
       layout: post
       read_time: true
+
+remote_theme: "mmistakes/jekyll-theme-basically-basic"
